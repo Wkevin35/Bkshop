@@ -1,0 +1,32 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    background-image: url(/asset/img/bg.jpg);
+    background-size: cover;
+}
+
+.img {
+    display: inline-block;
+    background-color:rgb(166,129,86);
+    padding:60px;
+    border-radius: 50%;
+  }
+
+.nav ul {
+    float: right;   
+}  
+
+.nav li {
+    display: inline-block;
+}
+
+.nav a {
+    display: inline-block;
+}
