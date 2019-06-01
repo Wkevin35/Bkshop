@@ -1,0 +1,19 @@
+extends master.pug
+
+
+
+
+append title
+    title="Kevin麵包店 - 麵包的故事"
+    link(rel="stylesheet" href="./asset/css/story.css")
+append body
+    .main
+        .box
+        include nav.pug
+        .contain
+            .story
+                mixin storyclass(name)
+                    div(class="storymain "+name)
+                +storyclass("story1")  #[span(class="text") 牛角麵包]                
+                +storyclass("story2")  #[span(class="text") 三明治塔]
+    include footer.pug          
