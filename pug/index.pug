@@ -6,14 +6,16 @@ append title
 append body
     .main
         .box
-        include nav.pug
-        .contain
-            h1 我們是Bakery商店
-            p 我們提供品質最好的原料，並細心打造各種產品提供給喜愛我們的客戶
-            a(href="") 前往購買
-            hr
-            .button
-                a(class="img" href="./about.html") #[img(src="./asset/img/icon-about.png" alt="關於我")]
-                a(class="img" href="./story.html") #[img(src="./asset/img/icon-story.png" alt="關於我")]
-                a(class="img" href="./contact.html") #[img(src="./asset/img/icon-contact.png" alt="關於我")]
+            include nav.pug
+            .contain
+                h1 我們是Bakery商店
+                p 我們提供品質最好的原料，並細心打造各種產品提供給喜愛我們的客戶
+                a(href="") 前往購買
+                hr
+                .button
+                    mixin connect(href, img, alt)
+                        a(class="img" href=href) #[img(src=img alt=alt)]
+                    +connect("./about.html", "./asset/img/icon-about.png", "關於我")    
+                    +connect("./story.html", "./asset/img/icon-story.png", "麵包的故事")    
+                    +connect("./contact.html", "./asset/img/icon-contact.png", "聯絡我")    
     include footer.pug           

@@ -5,27 +5,33 @@ append title
     link(rel="stylesheet" href="./asset/css/contact.css")
 
 append body
+
      .main
         .box
-        include nav.pug
-        .contact
-            form( action="https://www.w3schools.com/action_page.php" method ="post" target="_blank")
-                .table
-                    label(for="user") 姓名
-                    input(type="text" 
-                        id="user"
-                        name="user"
-                        placeholder="請輸入您的姓名"
-                        required)
-                    label(for="email") 信箱
-                    input(type="email" 
-                        id="email"
-                        name="email"
-                        placeholder="請輸入您的信箱"
-                        required)      
-                    label(for="message") 請留下你想對我們說的話
-                    textarea(name="message" cols="30" rows="10" required)
-                div(class="button")
-                    input(class="send" type="reset" value = "重新輸入") 
-                    input(class="send" type="submit" value = "確認送出") 
-     include footer.pug        
+            include nav.pug
+            .contact
+                - var user="user";
+                - var email = "email";
+                - var message = "message";
+                form( action="https://www.w3schools.com/action_page.php" method ="post" target="_blank")
+                    .table
+                        label(for=user) 姓名
+                        input(type="text" 
+                            id=user
+                            name=user
+                            placeholder="請輸入您的姓名"
+                            required)
+                        label(for=email) 信箱
+                        input(type=email 
+                            id=email
+                            name=email
+                            placeholder="請輸入您的信箱"
+                            required)      
+                        label(for=message) 請留下你想對我們說的話
+                        textarea(name=message cols="30" rows="10" required)
+                    div(class="button")
+                        mixin btn(send, text)
+                            input(class="send" type=send value = text)
+                        +btn("reset", "重新輸入")         
+                        +btn("submit", "確認送出")         
+     include footer.pug

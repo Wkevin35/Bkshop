@@ -9,11 +9,11 @@ append title
 append body
     .main
         .box
-        include nav.pug
-        .contain
-            .story
-                mixin storyclass(name)
-                    div(class="storymain "+name)
-                +storyclass("story1")  #[span(class="text") 牛角麵包]                
-                +storyclass("story2")  #[span(class="text") 三明治塔]
+            include nav.pug
+            .contain
+                .story
+                    mixin storyclass(name, bread)
+                        div(class="storymain "+name) #[span(class="text") #{bread}]
+                    +storyclass("story1", "牛角麵包")  
+                    +storyclass("story2", "三明治")  
     include footer.pug          
