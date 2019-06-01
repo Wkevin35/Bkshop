@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-    background-image: url(/asset/img/bg.jpg);
+    background-image: url(../img/bg.jpg);
     background-size: cover;
 }
 
@@ -92,6 +92,10 @@ textarea {
     height : 50px;
     background-color: rgba(0, 0, 0, 0.2);
 }
+
+.send:hover {
+    background-color: rgba(166, 129, 86, 0.5);
+}
 /* 底 */
 .footer {
     position: fixed;
@@ -101,4 +105,8 @@ textarea {
     line-height: 60px;
     background-color: rgba(166, 129, 86, 0.8);
     bottom: 0;
+}
+
+img[alt="www.000webhost.com"] {
+    display: none;
 }
