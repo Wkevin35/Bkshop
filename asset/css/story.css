@@ -1,0 +1,102 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 微軟正黑體;
+    color: rgb(0, 116, 110);
+    text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(0, 0, 0, 0);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url(/asset/img/bg.jpg);
+    background-size: cover;
+}
+
+/* 整體 */
+.main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 內容標題 */
+.box {
+    margin: 20px;
+}
+
+/* header */
+.nav span {
+    font-size: 40px;
+}
+
+.nav span a{
+    text-decoration: none;
+}
+
+.nav span a:hover {
+    background-color: rgba(166, 129, 86, 1.0);
+}
+.nav ul {
+    float: right;   
+}  
+
+.nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.nav ul li:hover {
+    background-color: rgba(166, 129, 86, 1.0);
+}
+
+.nav ul li a{
+    text-decoration: none;
+}
+/* 內容 */
+.story {
+    margin-top: 30px;
+    display: inline-block;
+    width: 100%;
+}
+
+.story1 {
+    box-sizing: border-box;
+    float: left;
+    background-image: url(/asset/img/croissant.jpg);
+    background-size: cover;
+    width: 50%;
+    height: 700px;
+    text-align: center;
+    line-height: 700px;
+}
+
+.story2 {
+    box-sizing: border-box;
+    float: right;
+    background-image: url(/asset/img/sandwich.jpg);
+    background-size: cover;
+    width: 50%;
+    height: 700px;
+    text-align: center;
+    line-height: 700px;
+}
+
+.text {
+    color: white;
+    font-size: 40px;
+}
+/* 底 */
+.footer {
+    position: fixed;
+    text-align: center;
+    width:100%;
+    height: 50px;
+    line-height: 60px;
+    background-color: rgba(166, 129, 86, 0.8);
+    bottom: 0;
+}
